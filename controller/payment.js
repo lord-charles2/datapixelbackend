@@ -121,15 +121,15 @@ Regards, Charles.`;
         server: "hotspot1",
       };
 
-      const config = {
+      let config = {
         method: "post",
         maxBodyLength: Infinity,
-        url: "http://id-5.hostddns.us:9909/rest/ip/hotspot/user/add",
+        url: "http://id-9.hostddns.us:12605/rest/ip/hotspot/user/add",
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Basic YWRtaW4xNDcwMDowMjYxNA==",
+          Authorization: "Basic YWRtaW46MDAwMA==",
         },
-        data,
+        data: data,
       };
 
       try {
