@@ -339,7 +339,7 @@ Regards, Charles.`;
           console.log("Error adding user and sending code:", error);
         }
       } else if (value === "25.00") {
-        const profile = "4mbps-25bob-6gb-24hrs";
+        const profile = "default";
         const name = generateUniqueCode();
         const uptime = "21h";
         const bytes = "6000000000";
@@ -358,7 +358,7 @@ Regards, Charles.`;
             devices,
             validity
           );
-          await sendCode(name, speed, bandwidth, devices, validity);
+          // await sendCode(name, speed, bandwidth, devices, validity);
         } catch (error) {
           console.log("Error adding user and sending code:", error);
         }
