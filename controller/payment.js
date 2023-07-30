@@ -72,31 +72,31 @@ Devices: ${devices}
 Enjoy & contact us for assistance.
 Regards, Peter.`;
 
-      // try {
-      //   const data = JSON.stringify({
-      //     mobile: account,
-      //     sender_name: "23107",
-      //     service_id: 0,
-      //     message: message,
-      //   });
+      try {
+        const data = JSON.stringify({
+          mobile: account,
+          sender_name: "23107",
+          service_id: 0,
+          message: message,
+        });
 
-      //   const config = {
-      //     method: "post",
-      //     maxBodyLength: Infinity,
-      //     url: "https://api.mobitechtechnologies.com/sms/sendsms",
-      //     headers: {
-      //       h_api_key:
-      //         "22dd6700b48060c8ae97dc4c4c2363d720dbbb7802050cc7701e350e580ee052",
-      //       "Content-Type": "application/json",
-      //     },
-      //     data: data,
-      //   };
+        const config = {
+          method: "post",
+          maxBodyLength: Infinity,
+          url: "https://api.mobitechtechnologies.com/sms/sendsms",
+          headers: {
+            h_api_key:
+              "2cdddc70ba7baedb78fab648efb9da69937c987d88e860a5a92d3d02b6fe3150",
+            "Content-Type": "application/json",
+          },
+          data: data,
+        };
 
-      //   const response = await axios.request(config);
-      //   console.log(JSON.stringify(response.data));
-      // } catch (error) {
-      //   console.log("Error sending SMS:", error);
-      // }
+        const response = await axios.request(config);
+        console.log(JSON.stringify(response.data));
+      } catch (error) {
+        console.log("Error sending SMS:", error);
+      }
 
       try {
         await axios.post("https://sms.textsms.co.ke/api/services/sendsms/", {
