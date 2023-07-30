@@ -194,61 +194,13 @@ Regards, Peter.`;
     }
 
     if (state === "COMPLETE") {
-      if (value === "19.00") {
-        const profile = "8mbps-20bob-50gb-3hrs";
+      if (value === "60.00") {
+        const profile = "24-60bob";
         const name = generateUniqueCode();
-        const uptime = "3h";
-        const bytes = "50000000000";
+        const uptime = "24h";
+        const bytes = "50000000000000";
         const speed = "8Mbps";
-        const bandwidth = "50GB";
-        const devices = "2";
-        const validity = "3hours";
-        try {
-          await addUserToMikrotik(
-            name,
-            profile,
-            uptime,
-            bytes,
-            speed,
-            bandwidth,
-            devices,
-            validity
-          );
-          await sendCode(name, speed, bandwidth, devices, validity);
-        } catch (error) {
-          console.log("Error adding user and sending code:", error);
-        }
-      } else if (value === "7.00") {
-        const profile = "8mbps-7bob-50gb-1hour";
-        const name = generateUniqueCode();
-        const uptime = "1h";
-        const bytes = "50000000000";
-        const speed = "8Mbps";
-        const bandwidth = "50GB";
-        const devices = "2";
-        const validity = "1hour";
-        try {
-          await addUserToMikrotik(
-            name,
-            profile,
-            uptime,
-            bytes,
-            speed,
-            bandwidth,
-            devices,
-            validity
-          );
-          await sendCode(name, speed, bandwidth, devices, validity);
-        } catch (error) {
-          console.log("Error adding user and sending code:", error);
-        }
-      } else if (value === "1.00") {
-        const profile = "10mbps-20bob-5gb-24hrs";
-        const name = generateUniqueCode();
-        const uptime = "21h";
-        const bytes = "5000000000";
-        const speed = "10Mbps";
-        const bandwidth = "5GB";
+        const bandwidth = "unlimited";
         const devices = "2";
         const validity = "24hours";
         try {
@@ -266,37 +218,13 @@ Regards, Peter.`;
         } catch (error) {
           console.log("Error adding user and sending code:", error);
         }
-      } else if (value === "20.00") {
-        const profile = "10mbps-20bob-5gb-24hrs";
+      } else if (value === "40.00") {
+        const profile = "12hr-40bob";
         const name = generateUniqueCode();
-        const uptime = "21h";
-        const bytes = "5000000000";
-        const speed = "10Mbps";
-        const bandwidth = "5GB";
-        const devices = "2";
-        const validity = "24hours";
-        try {
-          await addUserToMikrotik(
-            name,
-            profile,
-            uptime,
-            bytes,
-            speed,
-            bandwidth,
-            devices,
-            validity
-          );
-          await sendCode(name, speed, bandwidth, devices, validity);
-        } catch (error) {
-          console.log("Error adding user and sending code:", error);
-        }
-      } else if (value === "30.00") {
-        const profile = "5mbps-24hrs-ksh30-50gb";
-        const name = generateUniqueCode();
-        const uptime = "11h";
-        const bytes = "50000000000";
-        const speed = "5Mbps";
-        const bandwidth = "50GB";
+        const uptime = "12h";
+        const bytes = "50000000000000";
+        const speed = "8Mbps";
+        const bandwidth = "unlimited";
         const devices = "2";
         const validity = "12hours";
         try {
@@ -315,14 +243,14 @@ Regards, Peter.`;
           console.log("Error adding user and sending code:", error);
         }
       } else if (value === "35.00") {
-        const profile = "4mbps-35bob-10gb-24hrs";
+        const profile = "35bob-6hours";
         const name = generateUniqueCode();
-        const uptime = "21h";
-        const bytes = "8000000000";
-        const speed = "5Mbps";
-        const bandwidth = "10GB";
+        const uptime = "6h";
+        const bytes = "5000000000000";
+        const speed = "10Mbps";
+        const bandwidth = "unlimited";
         const devices = "2";
-        const validity = "24hours";
+        const validity = "6hours";
         try {
           await addUserToMikrotik(
             name,
@@ -338,15 +266,15 @@ Regards, Peter.`;
         } catch (error) {
           console.log("Error adding user and sending code:", error);
         }
-      } else if (value === "25.00") {
-        const profile = "default";
+      } else if (value === "20.00") {
+        const profile = "3h-20ksh";
         const name = generateUniqueCode();
-        const uptime = "21h";
-        const bytes = "6000000000";
+        const uptime = "3h";
+        const bytes = "5000000000000";
         const speed = "10Mbps";
-        const bandwidth = "6GB";
+        const bandwidth = "unlimited";
         const devices = "2";
-        const validity = "24hours";
+        const validity = "3hours";
         try {
           await addUserToMikrotik(
             name,
@@ -358,12 +286,85 @@ Regards, Peter.`;
             devices,
             validity
           );
-          // await sendCode(name, speed, bandwidth, devices, validity);
+          await sendCode(name, speed, bandwidth, devices, validity);
+        } catch (error) {
+          console.log("Error adding user and sending code:", error);
+        }
+      } else if (value === "10.00") {
+        const profile = "1hr-10bob";
+        const name = generateUniqueCode();
+        const uptime = "1h";
+        const bytes = "50000000000000";
+        const speed = "5Mbps";
+        const bandwidth = "unlimited";
+        const devices = "2";
+        const validity = "1hour";
+        try {
+          await addUserToMikrotik(
+            name,
+            profile,
+            uptime,
+            bytes,
+            speed,
+            bandwidth,
+            devices,
+            validity
+          );
+          await sendCode(name, speed, bandwidth, devices, validity);
+        } catch (error) {
+          console.log("Error adding user and sending code:", error);
+        }
+      } else if (value === "7.00") {
+        const profile = "30min-7bob";
+        const name = generateUniqueCode();
+        const uptime = "30m";
+        const bytes = "8000000000000";
+        const speed = "5Mbps";
+        const bandwidth = "unlimited";
+        const devices = "2";
+        const validity = "30 minutes";
+        try {
+          await addUserToMikrotik(
+            name,
+            profile,
+            uptime,
+            bytes,
+            speed,
+            bandwidth,
+            devices,
+            validity
+          );
+          await sendCode(name, speed, bandwidth, devices, validity);
+        } catch (error) {
+          console.log("Error adding user and sending code:", error);
+        }
+      } else if (value === "1.00") {
+        const profile = "30min-7bob";
+        const name = generateUniqueCode();
+        const uptime = "30m";
+        const bytes = "8000000000000";
+        const speed = "5Mbps";
+        const bandwidth = "unlimited";
+        const devices = "2";
+        const validity = "30 minutes";
+        try {
+          await addUserToMikrotik(
+            name,
+            profile,
+            uptime,
+            bytes,
+            speed,
+            bandwidth,
+            devices,
+            validity
+          );
+          await sendCode(name, speed, bandwidth, devices, validity);
         } catch (error) {
           console.log("Error adding user and sending code:", error);
         }
       }
     }
+    
 
     const filter = { "invoice.invoice_id": invoice_id };
     const update = {
