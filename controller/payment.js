@@ -70,38 +70,38 @@ Bandwidth: ${bandwidth}
 Devices: ${devices}
 
 Enjoy & contact us for assistance.
-Regards, Charles.`;
+Regards, Peter.`;
 
-      try {
-        const data = JSON.stringify({
-          mobile: account,
-          sender_name: "23107",
-          service_id: 0,
-          message: message,
-        });
+      // try {
+      //   const data = JSON.stringify({
+      //     mobile: account,
+      //     sender_name: "23107",
+      //     service_id: 0,
+      //     message: message,
+      //   });
 
-        const config = {
-          method: "post",
-          maxBodyLength: Infinity,
-          url: "https://api.mobitechtechnologies.com/sms/sendsms",
-          headers: {
-            h_api_key:
-              "22dd6700b48060c8ae97dc4c4c2363d720dbbb7802050cc7701e350e580ee052",
-            "Content-Type": "application/json",
-          },
-          data: data,
-        };
+      //   const config = {
+      //     method: "post",
+      //     maxBodyLength: Infinity,
+      //     url: "https://api.mobitechtechnologies.com/sms/sendsms",
+      //     headers: {
+      //       h_api_key:
+      //         "22dd6700b48060c8ae97dc4c4c2363d720dbbb7802050cc7701e350e580ee052",
+      //       "Content-Type": "application/json",
+      //     },
+      //     data: data,
+      //   };
 
-        const response = await axios.request(config);
-        console.log(JSON.stringify(response.data));
-      } catch (error) {
-        console.log("Error sending SMS:", error);
-      }
+      //   const response = await axios.request(config);
+      //   console.log(JSON.stringify(response.data));
+      // } catch (error) {
+      //   console.log("Error sending SMS:", error);
+      // }
 
       try {
         await axios.post("https://sms.textsms.co.ke/api/services/sendsms/", {
-          apikey: "9d97e98deaa48d145fec88150ff28203",
-          partnerID: "7848",
+          apikey: "62f1a8ee9cdc8cbfb7b653427b974387",
+          partnerID: "8112",
           message: message,
           shortcode: "TextSMS",
           mobile: account,
