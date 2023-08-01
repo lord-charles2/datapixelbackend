@@ -66,7 +66,6 @@ const webhookTrigger = async (req, res) => {
 
       const message = `Voucher: ${name}
 Validity: ${validity}
-Bandwidth: ${bandwidth}
 Devices: ${devices}
 
 Enjoy & contact us for assistance.
