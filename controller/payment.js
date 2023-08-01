@@ -250,7 +250,7 @@ Regards, Peter.`;
         const speed = "10Mbps";
         const bandwidth = "5GB";
         const devices = "2";
-        const validity = "45minutes";
+        const validity = "1hour 45minutes";
         try {
           await addUserToMikrotik(
             name,
